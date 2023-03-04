@@ -1,0 +1,17 @@
+----------------Contact Management App-----------------
+----1.create new project
+----2.run project
+----3.remove all contents from appcomponent.html file
+----4.configure external libraries-bootstrap,font awesome,google fonts
+
+--5.create components
+-----1.all contact
+-----2.add-contact
+-----3.edit-contact
+-----4.view-Contact
+-----5.navbar
+--6.to set up path for all components in Routes in app-routing module
+--7.use selector router outlet
+--8.Design component html
+--9.create angular service for making Api call
+---10.create a model for contact

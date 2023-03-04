@@ -1,0 +1,67 @@
+------Angular-front end technologies(Html CSS TS)-------------
+------
+
+
+
+        - Basic commands
+
+            1.to install angular cli : npm i -g @angular/cli
+            2.to create project : ng new demo-project
+            3.to run a project : ng serve
+            4. to create angular version : ng v
+            5. to generate component :ng g c component-name
+            6. to generate service : ng g s service-folder/service-name
+            7. to create pipe : ng g p pipe-folder/pipe-name
+            
+
+        - Basic Building blocks of angular
+
+            1. Module : root module : AppModule
+            2. Component : html,css,typescript(ts) : AppComponent
+            3.decorator
+            4. to set up path for component:AppRoutingModule in Routes array
+              {path:'component path',component:component-name}
+              router-outlet selector in AppComponent.html : to change according to the user
+
+            5.Data binding-sharing data within a component
+          -one way binding:data sharing will be held in one direction at a time
+            ---ts(component) to html(view) -
+            ---string Interpolation: {{property name}} in html
+            ---property Binding: [attribute-name] ="property name"
+
+            --html(view) to ts(component)
+            ----Event binding:(event-name)="function call()"
+            ----Event Binding using $event :(event-name) ="function call($event)"
+            ----Event binding using template reference: #variable-name, (event-name)="function call(variable-name)"
+          -Two way binding-Data sharing will be held in both direction at a time
+            -Using ngModel:[(ngModel)] ="property-name" if it is inside a form tag the set the name property of that input tag
+               -FormsModule
+        6.Dependency injection: to define inside the constructor 
+             syntax:access-specifier variable-name : dependent-class-name
+             access-specifiers:public,private,protected
+        7.Angular services: share common logic between components
+        8.Directives:DOM Manipulation
+             component Directives
+          ---structural Directives: To add /remove html elements based on class property
+          ---*ngFor="let variable-name of array-name" in html
+          ---*ngIf="condition" when condition is true then html is present
+
+        9.Asynchronous call-Resolving
+           --RxJS-Reactive Extension for javascript
+           --To resolve Asynchronus function angular uses
+              -observable:
+                 -subscribe(observer:call back function)
+
+        10.API call : 
+          Import HttpClientModule to Appmodule
+          Dependency inject HttpClient to get http request
+
+        11.ActivatedRoute class:provides access to information about a router/url/path associated with a component 
+        -params: to get path parameter from a url
+
+        12. Angular pipe:transform user input to another format
+            -syntax:
+              {{value expression | pipe-operator [ :format [ : timezone [ : locale]]]}}
+        
+        13.Angular Forms
+          -template driven forms:using
